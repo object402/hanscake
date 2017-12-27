@@ -63,4 +63,34 @@
 .k_showcakes>ul>li>dl {
   position: absolute;
   display: none;
+  background-color: rgba(1, 1, 1, 0.65);
+  width: 220px;
+  height: 220px;
+  text-align: center;
+  left: 14px;
+  top: 14px;
+  color: white;
+  border-radius: 10%;
+  line-height: 30px;
+  padding-top: 90px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.k_showcakes>ul>li>dl>dt {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  /* margin-bottom: 10px; */
+  top: -50px;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+display: block;
+}
+
+.k_showcakes>ul>li>dl>dd {
+  font-size: 18px;
+  position: relative;
+    bottom: -150px;
 }
