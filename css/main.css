@@ -1,0 +1,46 @@
+#j_mainSlideFirst{
+   overflow:hidden;
+   position: relative;
+}
+
+#j_mainSlideFirst ul{}
+
+#j_mainSlideFirst ul li{
+   float: left;
+   display: block;
+   /* margin: 0 auto; */
+}
+
+#j_mainSlideFirst ul li a{}
+
+#j_mainSlideFirst ul li a img{}
+
+
+/* 페이징 */
+#j_paging{
+   position: absolute;
+   left: 50%;
+   bottom: 13%;
+   transform: translate(-50%);
+}
+
+#j_paging li{
+   display: inline-block;
+}
+
+#j_paging li a{
+   display: block;
+   width: 15px;
+   height: 15px;
+   background: url(../images/ico/ico_pager1_off.png) no-repeat 0 0;
+   font-size: 0;
+   text-indent: -99999px;
+   opacity:1;
+   z-index: 99999;
+   margin: 0 3px;
+}
+
+#j_paging li a.j_pagingActive{
+   width: 46px;
+   background: url(../images/ico/ico_pager1_on.png) no-repeat 0 0;
+}
