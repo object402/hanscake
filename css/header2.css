@@ -12,6 +12,7 @@ header{
    height: inherit;
    margin: 0 auto;
    position: relative;
+   z-index:9999;
 }
 /* 로고 */
 #logo {
@@ -126,11 +127,16 @@ header{
 #header_btn>a>img {}
 
 /* section */
-section{
+/* section{
    display: block;
    height: 500px;
+<<<<<<< HEAD
    /* background-color: tomato; */
 }
+=======
+   background-color: tomato;
+} */
+>>>>>>> a354cba8ae6924f6e6b85a83201b98c46e7ff6ff
 
 
 /* footer */
