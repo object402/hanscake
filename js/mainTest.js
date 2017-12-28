@@ -1,7 +1,7 @@
 //윈도우창 시작됬을때
 $(document).ready(function() {
    //윈도우 사이즈 구하기
-   var fullWidth = $(window).outerWidth();
+   var fullWidth = $(window).innerWidth();
    //슬라이드 갯수 구하기
    var imgLength = $('#j_mainSlideFirst>ul>li').length;
    //전체슬라이드 ul width값 구하기
@@ -37,15 +37,18 @@ $(document).ready(function() {
    //복제하는 변수 만들기
    var copyObj = $('#j_mainSlideFirst li:lt(' + show_num + ')').clone();
    list.append(copyObj);
-
+   console.log('LIST1: ' + list.width());
 
    //*********************
    //윈도우창 크기 조절 되었을때
    $(window).resize(function() {
+
       //윈도우 사이즈 다시 구하기
-      fullWidth = $(window).outerWidth();
+      fullWidth = $(window).innerWidth();
       //전체슬라이드 ul width값 다시 구하기
       ulWidth = ((fullWidth * imgLength) + fullWidth);
+
+      list = $('#j_mainSlideFirst ul');
 
       //슬라이드 보여주는 크기 = 변경된 윈도우 사이즈
       $('#j_mainSlideFirst').css({
@@ -59,6 +62,8 @@ $(document).ready(function() {
       $('#j_mainSlideFirst>ul').css({
          width: ulWidth
       });
+      console.log('LIST2: ' + list.width());
+
    })
 
 
@@ -66,7 +71,7 @@ $(document).ready(function() {
    function playMainSlide() {
       if (num == imgLength) {
          num = 0;
-         //0이면 마진 0으로해서 처음으로 돌아가기
+         //마지막이면 마진 0으로해서 처음으로 돌아가기
          list.css({
             'margin-left': 0
          });

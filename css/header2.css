@@ -1,20 +1,26 @@
 a {
    color: #1a1a1a;
 }
-
-#header_wrapper {
+/* header */
+header{
    width: 100%;
    height: 106px;
    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
+#header_wrapper {
+   width: 1000px;
+   height: inherit;
+   margin: 0 auto;
+   position: relative;
+}
+/* 로고 */
 #logo {
    display: inline-block;
    position: absolute;
    width: 109px;
    height: 77px;
-   top: 2%;
-   left: 17%;
+   top: 50%;
+   transform: translateY(-50%);
 }
 
 #logo a {
@@ -26,15 +32,14 @@ a {
 #allMenu {
    display: none;
 }
-
+/* 네비 */
 .main_nav {
    position: absolute;
-   top: 26px;
-   left: 31%;
-   /* overflow: hidden; */
+   bottom:0;
+   left: 50%;
+   transform: translateX(-50%);
    width: 640px;
    display: block;
-   /* margin: 0 auto; */
 }
 
 .main_nav>li {
@@ -60,15 +65,17 @@ a {
 }
 
 .sub_nav {
-   /* width: 640px; */
-   /* overflow: hidden; */
    background: #e84a36;
    display: inline-block;
    position: absolute;
    height: 30px;
-line-height: 30px;
-display: none;
-margin-left:34px;
+   line-height: 30px;
+   display: none;
+   margin-left:34px;
+   bottom:-30px;
+}
+.main_nav>li:nth-child(3) .sub_nav{
+   margin-left:0;
 }
 .main_nav>li:nth-child(1):hover .sub_nav,
 .main_nav>li:nth-child(2):hover .sub_nav,
@@ -100,27 +107,85 @@ margin-left:34px;
    border-right: 1px solid rgba(0, 0, 0, 0);
 }
 
+/* 메인네비:인스타, 페이스북 버튼 */
 #header_btn {
    clear: both;
    display: inline-block;
-   margin: 3.5% 20% 0 0;
    position: absolute;
-   top: 0px;
-   right: -2%;
+   top: 50%;
+   right: 40px;
 }
 
 #header_btn>a {
    width: 30px;
    height: 30px;
    display: inline-block;
+   margin-left: 5px;
 }
 
 #header_btn>a>img {}
 
+/* section */
+section{
+   display: block;
+   height: 500px;
+   background-color: tomato;
+}
 
 
-/* #img{
+/* footer */
+footer{
+   background-color: #212121;
+   height: 200px;
+   width: 100%;
    position: absolute;
-   top:106px;
-   left: -509px
-} */
+}
+#j_footerWrapper{
+   color: #5a5a5a;
+   font-family: 'ng', dotum, Arial, sans-serif;
+   font-size: 12px;
+   width: 1000px;
+   height: inherit;
+   margin: 0 auto;
+   position: relative;
+}
+#j_footerWrapper div{
+   position: absolute;
+   display: inline-block;
+   margin-left: 2%;
+   top: 50%;
+   transform: translateY(-50%);
+}
+#j_footerWrapper .j_footerLogo{}
+#j_footerWrapper .j_footerLogo img{}
+#j_footerWrapper .j_footerTxt{
+   width: 635px;
+    left: 49%;
+    transform: translateX(-53%);
+   top: 82px;
+}
+#j_footerWrapper .j_footerTxt p{
+   margin-top: 1%;
+}
+#j_footerWrapper .j_footerTxt p:first-child{}
+#j_footerWrapper .j_footerTxt p:last-child{}
+#j_footerWrapper .j_footerTxt span{
+   margin-top: 10px;
+   display: inline-block;
+}
+#j_footerWrapper .j_footerButton{
+   right: 0;
+}
+#j_footerWrapper .j_footerButton a{
+   display: inline-block;
+   width: 67px;
+   padding-left: 10px;
+   height: 25px;
+   line-height: 25px;
+   background-color: #000;
+   font-size: 11px;
+   color: #888;
+   background: url(../images/ico/bul_01.png) right center no-repeat #151515;
+}
+#j_footerWrapper .j_footerButton a:first-child{}
+#j_footerWrapper .j_footerButton a:last-child{}
