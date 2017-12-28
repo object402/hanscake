@@ -96,7 +96,7 @@ section.p_space{
 .p_space_contents_2{
   width:100%;
   height:673px;
-  /* background:blue; */
+  background:#fff;
 }
 
 .p_space_contents_2_wrap{
@@ -144,11 +144,4 @@ section.p_space{
 }
 .p_space_contents_2_txt .p-first{
     margin-top:20px;
-}
-
-/* footer area */
-footer{
-  width:100%;
-  height:150px;
-  background: #fff;
 }

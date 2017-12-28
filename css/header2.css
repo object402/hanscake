@@ -129,7 +129,7 @@ header{
 section{
    display: block;
    height: 500px;
-   background-color: tomato;
+   /* background-color: tomato; */
 }
 
 
