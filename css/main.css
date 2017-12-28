@@ -1,7 +1,7 @@
 #j_mainSlideFirst{
    overflow:hidden;
    position: relative;
-   z-index: -1;
+   /* z-index: -1 */
 }
 
 #j_mainSlideFirst ul{}
