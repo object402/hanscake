@@ -1,0 +1,135 @@
+@charset "utf-8";
+.p_be_a_family{
+  width:100%;
+  height:680px;
+  margin:auto;
+  background-color:#f9f9f9;
+}
+/* banner  */
+.p_be_a_family_banner {
+  width:100%;
+  height:200px;
+  width: 100%;
+  height: 200px;
+  line-height: 200px;
+  background: url(../images/bg/bg_story2.jpg) no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  font-size: 50px;
+}
+
+/* content txt */
+.p_be_a_family_txt{
+  margin-top:30px;
+  margin-bottom:30px;
+}
+.p_be_a_family_txt h3{
+  font-size: 30px;
+  text-align: center;
+  color:#ff552e;
+  font-weight: bold;
+}
+
+.p_be_a_family_txt hr{
+  margin-top:18px;
+      margin-bottom: 18px;
+}
+.p_be_a_family_txt span{
+  display: block;
+  text-align:center;
+  color:gray;
+  font-size:15px;
+}
+
+/* arrow */
+.p_arrow_1{
+  position: absolute;
+  top: 106px;
+  left: 200px;
+  width:100px;
+  height:100px;
+  background: url(../images/picto/arrow.png) no-repeat;
+}
+.p_arrow_2{
+  position: absolute;
+  top: 106px;
+  left: 200px;
+  width:100px;
+  height:100px;
+  background: url(../images/picto/arrow.png) no-repeat;
+}
+.p_arrow_3{
+  position: absolute;
+  top: 106px;
+  left: 200px;
+  width:100px;
+  height:100px;
+  background: url(../images/picto/arrow.png) no-repeat;
+}
+.p_arrow_4{
+  position: absolute;
+  top: 106px;
+  left: 200px;
+  width:100px;
+  height:100px;
+  background: url(../images/picto/arrow.png) no-repeat;
+}
+
+/* list  */
+
+.p_pcito_list_wrap{
+  width: 1000px;
+  height: inherit;
+  margin: auto;
+  /* margin-bottom: 51px; */
+  /* padding-bottom: 63px; */
+  /* padding-bottom: 50px; */
+  background: #fff;
+  border: 1px dashed #ff552e66;
+  /* border-bottom: 1px dashed #ff552e66; */
+  box-sizing: border-box;
+}
+
+.p_picto_list ul{
+  display: block;
+  margin-bottom:50px;
+  margin:auto;
+  width:660px;
+}
+.p_picto_list ul li{
+  position: relative;
+  display: block;
+  margin-left:105px;
+  margin-top:50px;
+  float:left;
+  width:150px;
+}
+/* .p_picto_list ul li:nth-child(4),
+.p_picto_list ul li:nth-child(5),
+.p_picto_list ul li:nth-child(6){
+  margin-bottom:50px;
+} */
+
+.p_picto_list ul li span{
+  margin:auto;
+  display: block;
+  width:150px;
+  line-height:25px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top:20px;
+  border-top:1px dashed lightgray;
+
+}
+.p_picto_list ul li:first-child,
+.p_picto_list ul li:nth-child(4){
+  margin-left:0px;
+}
+
+.p_picto_list ul li img{
+  /* display: block; */
+  width:150px;
+}

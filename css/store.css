@@ -183,6 +183,7 @@ section.p_store h1::after {
   border-bottom: 5px solid #e5e6e6;
   background: #f8f2ea;
 }
+
 .p_store_list:hover {
   border-bottom: 5px solid #ff552ec2;
   /* #ff552e  */
