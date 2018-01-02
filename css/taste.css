@@ -31,11 +31,11 @@
 .k_contents_nav>ul>li>a {
   display: block;
   width: 160px;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .menuhover {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: bold;
   border-bottom: 2px solid #ff552e;
 }
@@ -86,11 +86,11 @@
   text-align: center;
   width: 100%;
   margin: auto;
-display: block;
+  display: block;
 }
 
 .k_showcakes>ul>li>dl>dd {
   font-size: 18px;
   position: relative;
-    bottom: -150px;
+  bottom: -150px;
 }
