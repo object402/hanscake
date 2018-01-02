@@ -133,19 +133,20 @@ header{
 <<<<<<< HEAD
    /* background-color: tomato; */
 }
-=======
+/* =======
    background-color: tomato;
 } */
->>>>>>> a354cba8ae6924f6e6b85a83201b98c46e7ff6ff
+
 
 
 /* footer */
 footer{
-   background-color: #212121;
+   background-color:#212121;
    height: 200px;
    width: 100%;
    position: absolute;
 }
+
 #j_footerWrapper{
    color: #5a5a5a;
    font-family: 'ng', dotum, Arial, sans-serif;
