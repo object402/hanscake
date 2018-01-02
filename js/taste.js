@@ -35,19 +35,50 @@ $(document).ready(function() {
     $('.k_contents_nav > ul > li > a').removeClass('menuhover')
     $(this).addClass('menuhover')
   })
+  $('.hanssweet').click(function() {
+    $('.drinkimg').css({
+      'display': 'none'
+    });
+    $('.sweetimg').css({
+      'display': 'block'
+    });
+
+    $('.k_contents_nav > ul > li > a').removeClass('menuhover')
+    $(this).addClass('menuhover')
+  })
+  $('.hansdrinks').click(function() {
+    $('.sweetimg').css({
+      'display': 'none'
+    });
+    $('.drinkimg').css({
+      'display': 'block'
+    });
+    $('.k_contents_nav > ul > li > a').removeClass('menuhover')
+    $(this).addClass('menuhover')
+  })
 
 
   var cakecnt = $('.k_showcakes > ul > li').length;
   for (var i = 0; i < cakecnt; i++) {
     $('.k_showcakes > ul > li').eq(i).hover(function() {
-     $(this).children('dl').stop().fadeIn(400);
-     $(this).children('dl').children('dt').stop().animate({'top':45},'slow');
-     $(this).children('dl').children('dd').stop().animate({'bottom':0},'slow');
-   },function(){
-     $(this).children('dl').css({'display':'none'});
-     $(this).children('dl').children('dt').stop().animate({'top':-50});
-      $(this).children('dl').children('dd').stop().animate({'bottom':-150});
-   })
+      $(this).children('dl').stop().fadeIn(400);
+      $(this).children('dl').children('dt').stop().animate({
+        'top': 45
+      }, 'slow');
+      $(this).children('dl').children('dd').stop().animate({
+        'bottom': 0
+      }, 'slow');
+    }, function() {
+      $(this).children('dl').css({
+        'display': 'none'
+      });
+      $(this).children('dl').children('dt').stop().animate({
+        'top': -50
+      });
+      $(this).children('dl').children('dd').stop().animate({
+        'bottom': -150
+      });
+    })
     console.log(i);
   }
 
