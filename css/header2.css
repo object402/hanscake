@@ -130,17 +130,23 @@ header{
 /* section{
    display: block;
    height: 500px;
+<<<<<<< HEAD
+   /* background-color: tomato; */
+}
+/* =======
    background-color: tomato;
 } */
 
 
+
 /* footer */
 footer{
-   background-color: #212121;
+   background-color:#212121;
    height: 200px;
    /*width: 100%;*/
    position: absolute;
 }
+
 #j_footerWrapper{
    background-color: #212121;
    color: #5a5a5a;

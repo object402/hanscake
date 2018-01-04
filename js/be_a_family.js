@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   $('.p_no').css({
     "opacity": "0"
   }).delay(300).animate({
@@ -12,7 +11,5 @@ $(document).ready(function() {
   }).delay(800).animate({
     "opacity": "1"
   }, "slow");
-
-
 
 })
