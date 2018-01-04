@@ -1,68 +1,245 @@
-#j_mainSlideFirst{
-   overflow:hidden;
+a {
+   color: #1a1a1a;
+}
+
+#j_allWrapper {
+   width: 100%;
+   min-width: 1000px;
+}
+
+/****** 헤더 시작 ******/
+
+header {
+   width: 1000px;
+   height: 106px;
+   margin: 0 auto;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   position: relative;
+}
+
+#header_wrapper {
+   width: 1000px;
+   height: inherit;
+   margin: 0 auto;
+   position: relative;
+   z-index: 9999;
+}
+
+/* 로고 */
+
+#logo {
+   display: inline-block;
+   position: absolute;
+   width: 109px;
+   height: 77px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+#logo a {
+   display: inline-block;
+}
+
+#logo a img {}
+
+#allMenu {
+   display: none;
+}
+
+/* 네비 */
+
+.main_nav {
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 640px;
+   display: block;
+}
+
+.main_nav>li {
+   float: left;
+}
+
+.main_nav>li>a {
+   display: inline-block;
+   width: 126px;
+   height: 80px;
+   line-height: 83px;
+   font-size: 16px;
+   padding: 0px 10px;
+   font-family: 'ng_b';
+}
+
+.main_nav>li>a>span {
+   text-align: center;
+   /* display: inline-block; */
+   width: 100%;
+   display: inline-block;
+   font-size: 22px;
+}
+
+.sub_nav {
+   background: #e84a36;
+   display: inline-block;
+   position: absolute;
+   height: 30px;
+   line-height: 30px;
+   display: none;
+   margin-left: 34px;
+   bottom: -30px;
+}
+
+.main_nav>li:nth-child(3) .sub_nav {
+   margin-left: 0;
+}
+
+.main_nav>li:nth-child(1):hover .sub_nav, .main_nav>li:nth-child(2):hover .sub_nav, .main_nav>li:nth-child(3):hover .sub_nav {
+   display: block;
+   z-index: 9999;
+}
+
+.main_nav>li:hover>a {
+   color: #e84a36;
+}
+
+.sub_nav>li:hover>a {
+   text-decoration: underline;
+}
+
+.sub_nav>li {
+   display: inline-block;
+}
+
+.sub_nav>li>a {
+   display: inline-block;
+   height: 15px;
+   line-height: 15px;
+   border-right: 1px solid #fff;
+   padding: 0 25px;
+   color: #fff;
+}
+
+.sub_nav>li:last-child>a {
+   border-right: 1px solid rgba(0, 0, 0, 0);
+}
+
+/* 메인네비:인스타, 페이스북 버튼 */
+
+#header_btn {
+   clear: both;
+   display: inline-block;
+   position: absolute;
+   top: 50%;
+   right: 0;
+}
+
+#header_btn>a {
+   width: 30px;
+   height: 30px;
+   display: inline-block;
+   margin-left: 5px;
+}
+
+#header_btn>a>img {}
+
+/****** 헤더 끝 ******/
+
+/***** 첫번째 슬라이드 시작 *****/
+
+#j_mainSlideFirst {
+   overflow: hidden;
    position: relative;
    /* z-index: -1 */
 }
 
-#j_mainSlideFirst ul{}
+#j_mainSlideFirst ul {}
 
-#j_mainSlideFirst ul li{
+#j_mainSlideFirst ul li {
    float: left;
    display: block;
    /* margin: 0 auto; */
 }
 
-#j_mainSlideFirst ul li a{}
+#j_mainSlideFirst ul li a {}
 
-#j_mainSlideFirst ul li a img{}
-
+#j_mainSlideFirst ul li a img {
+   min-width: 1000px;
+}
 
 /* 페이징 */
-#j_paging{
+
+#j_paging {
    position: absolute;
    left: 50%;
    bottom: 13%;
    transform: translate(-50%);
 }
 
-#j_paging li{
+#j_paging li {
    display: inline-block;
 }
 
-#j_paging li a{
+#j_paging li a {
    display: block;
    width: 15px;
    height: 15px;
    background: url(../images/ico/ico_pager1_off.png) no-repeat 0 0;
    font-size: 0;
    text-indent: -99999px;
-   opacity:1;
+   opacity: 1;
    z-index: 99999;
    margin: 0 3px;
 }
 
-#j_paging li a.j_pagingActive{
+#j_paging li a.j_pagingActive {
    width: 46px;
    background: url(../images/ico/ico_pager1_on.png) no-repeat 0 0;
 }
 
-/* 두번째 슬라이드 */
-/*이미지*/
-#j_mainSlideSecond{
+/***** 첫번째 슬라이드 끝 *****/
+
+/****** 두번째 슬라이드 시작 ******/
+
+#j_mainSlideSecond {
    position: relative;
-   /*width: 100%;*/
    height: 700px;
-   background-color: lightblue;
 }
-#j_subject{
-   background: url(../images/main/cake_slide_bg_txt.png) no-repeat lightpink;
-   height: 300px;
-   width: 995px;
-   background-size: 995px;
-   margin: 40px auto;
+
+#j_subject {
+   background: url(../images/main/cake_slide_bg_txt.png) no-repeat center top;
+   height: 131px;
+   margin: 40px 0;
 }
-#j_mainSlideSecond .j_SecondSlideImage{}
-#j_mainSlideSecond .j_SecondSlideImage li{
+
+#buttons {
+   position: relative;
+   height: 130px;
+   top: 137px;
+}
+
+#buttons a {
+   position: absolute;
+   height: 130px;
+   display: inline-block;
+   z-index: 1;
+}
+
+#buttons a:first-child {
+   left: 18%;
+}
+
+#buttons a:last-child {
+   right: 18%;
+}
+
+#buttons a img {}
+
+/*이미지*/
+
+#j_mainSlideSecond .j_SecondSlideImage {}
+
+#j_mainSlideSecond .j_SecondSlideImage li {
    position: absolute;
    z-index: 999;
    top: 8%;
@@ -70,40 +247,348 @@
    transform: translate(-50%);
    display: none;
 }
-#j_mainSlideSecond .j_SecondSlideImage li img{}
+
+#j_mainSlideSecond .j_SecondSlideImage li img {}
+
 /*텍스트*/
-#j_mainSlideSecond .j_SecondSlideTxt{}
-#j_mainSlideSecond .j_SecondSlideTxt li{
-    position: absolute;
-    z-index: 1;
-    text-align: center;
-    /* display: none; */
-    opacity:0;
-    /* bottom: 30px; */
-    top: 600px;
-    right: 50%;
-    transform: translateX(50%);
+
+#j_mainSlideSecond .j_SecondSlideTxt {}
+
+#j_mainSlideSecond .j_SecondSlideTxt li {
+   position: absolute;
+   z-index: 1;
+   text-align: center;
+   /* display: none; */
+   opacity: 0;
+   /* bottom: 30px; */
+   top: 600px;
+   right: 50%;
+   transform: translateX(50%);
 }
-#j_mainSlideSecond .j_SecondSlideTxt li p>strong{
+
+#j_mainSlideSecond .j_SecondSlideTxt li p>strong {
    font-size: 30px;
    font-weight: 900;
    font-family: 'ng', dotum, Arial, sans-serif;
 }
-#j_mainSlideSecond .j_SecondSlideTxt li p:nth-child(2){
+
+#j_mainSlideSecond .j_SecondSlideTxt li p:nth-child(2) {
    font-size: 15px;
    padding: 15px 0;
 }
-#j_mainSlideSecond .j_SecondSlideTxt li a{
+
+#j_mainSlideSecond .j_SecondSlideTxt li a {
    display: block;
    margin-top: 10px;
 }
-#j_mainSlideSecond .j_SecondSlideTxt li a img{}
-#j_bg{
+
+#j_mainSlideSecond .j_SecondSlideTxt li a img {}
+
+#j_bg {
    width: 100%;
    height: 327px;
    background-color: #f6f6f6;
    position: absolute;
    left: 0px;
    bottom: 0px;
-   height: 600px;
 }
+
+/****** 두번째 슬라이드 끝 ******/
+
+/****** 마지막 컨텐츠 시작 ******/
+
+#j_mainContentsThird {
+   height: 1027px;
+   padding-top: 100px;
+   background-color: lightpink;
+}
+
+#j_mainContentsThird_Wrap {
+   width: 1000px;
+   height: 900px;
+   margin: 0 auto;
+   position: relative;
+}
+
+#j_mainContentsThird_Wrap>div {
+   position: absolute;
+}
+
+.j_mainContentsThird_first {
+   width: 490px;
+   left: 0;
+   top: 0;
+}
+
+.j_mainContentsThird_first a {
+   display: block;
+   position: relative;
+}
+
+.j_mainContentsThird_first a img {
+   vertical-align: top;
+   border: none;
+}
+
+.j_mainContentsThird_first a div {
+   display: block;
+   width: 100%;
+   position: absolute;
+   left: 30px;
+   bottom: 30px;
+   margin-top: -50px;
+   font-size: 16px;
+   left-height: 22px;
+   color: #fff;
+}
+
+.j_mainContentsThird_first a div p {}
+
+.j_mainContentsThird_first a div p:first-child {
+   font-family: 'ng_b';
+   font-size: 30px;
+   line-height: 32px;
+   padding-bottom: 10px;
+   display: block;
+}
+
+.j_mainContentsThird_first a div p:last-child {}
+
+.j_mainContentsThird_second {
+   width: 490px;
+   right: 0;
+   top: 0;
+}
+
+.j_mainContentsThird_second a {
+   display: block;
+   position: relative;
+}
+
+.j_mainContentsThird_second a img {
+   vertical-align: top;
+   border: none;
+}
+
+.j_mainContentsThird_second a div {
+   display: block;
+   position: absolute;
+   left: 30px;
+   bottom: 30px;
+   margin-top: -50px;
+   text-align: left;
+   font-size: 16px;
+   line-height: 22px;
+   color: #fff;
+}
+
+.j_mainContentsThird_second a div p {}
+
+.j_mainContentsThird_second a div p:first-child {
+   font-family: 'ng_b';
+   font-size: 30px;
+   line-height: 32px;
+   padding-bottom: 10px;
+   display: block;
+}
+
+.j_mainContentsThird_second a div p:last-child {}
+
+.j_mainContentsThird_third {
+   width: 490px;
+   position: absolute;
+   left: 0;
+   top: 520px;
+}
+
+.j_mainContentsThird_third a {
+   display: block;
+   position: relative;
+}
+
+.j_mainContentsThird_third a img {
+   vertical-align: top;
+   border: 0;
+}
+
+.j_mainContentsThird_third a div {
+   display: block;
+   position: absolute;
+   left: 20px;
+   bottom: 30px;
+   font-size: 16px;
+   color: #fff;
+}
+
+.j_mainContentsThird_third a div p {}
+
+.j_mainContentsThird_third a div p:first-child {
+   font-family: 'ng_b';
+   font-size: 28px;
+   line-height: 32px;
+   color: #fff;
+   padding-bottom: 10px;
+   display: block;
+}
+
+.j_mainContentsThird_third a div p:last-child {}
+
+.j_mainContentsThird_fourth {
+   width: 490px;
+   position: absolute;
+   right: 0px;
+   top: 355px;
+   overflow: hidden;
+}
+
+.j_mainContentsThird_fourth .news {
+   display: block;
+   position: relative;
+   float: left;
+   width: 235px;
+}
+
+.j_mainContentsThird_fourth .news img {
+   vertical-align: top;
+   border: 0px;
+}
+
+.j_mainContentsThird_fourth .news div {
+   display: block;
+   padding-top: 20px;
+   font-size: 14px;
+   color: #4a4a4a;
+   line-height: 18px;
+}
+
+.j_mainContentsThird_fourth .news div p {}
+
+.j_mainContentsThird_fourth .news div p:first-child {
+   font-family: 'ng_b';
+   font-size: 28px;
+   line-height: 35px;
+   color: #000000;
+   padding-bottom: 10px;
+   display: block;
+}
+
+.j_mainContentsThird_fourth a div p:last-child {}
+
+.j_mainContentsThird_fourth .store {
+   display: block;
+   position: relative;
+   float: right;
+   width: 235px;
+}
+
+.j_mainContentsThird_fourth .store .j_imgBox {
+   display: block;
+   padding-top: 115px;
+}
+
+.j_mainContentsThird_fourth .store img {
+   display: block;
+   vertical-align: top;
+   border: 0px;
+}
+
+.j_mainContentsThird_fourth .store div {
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   padding-top: 17px;
+   display: block;
+   height: 71px;
+   font-size: 14px;
+   color: #4a4a4a;
+   line-height: 18px;
+}
+
+.j_mainContentsThird_fourth .store div p {}
+
+.j_mainContentsThird_fourth .store div p:first-child {
+   font-family: 'ng_b';
+   font-size: 30px;
+   line-height: 32px;
+   color: #000000;
+   padding-bottom: 10px;
+   display: block;
+}
+
+.j_mainContentsThird_fourth .store div p:last-child {}
+
+/****** 마지막 컨텐츠 끝 ******/
+
+/****** 푸터 시작 ******/
+
+footer {
+   background-color: #212121;
+   height: 200px;
+   /*width: 100%;*/
+   position: relative;
+}
+
+#j_footerWrapper {
+   background-color: #212121;
+   color: #5a5a5a;
+   font-family: 'ng', dotum, Arial, sans-serif;
+   font-size: 12px;
+   width: 1000px;
+   height: inherit;
+   margin: 0 auto;
+   position: relative;
+}
+
+#j_footerWrapper div {
+   position: absolute;
+   display: inline-block;
+   margin-left: 2%;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+#j_footerWrapper .j_footerLogo {}
+
+#j_footerWrapper .j_footerLogo img {}
+
+#j_footerWrapper .j_footerTxt {
+   width: 635px;
+   left: 49%;
+   transform: translateX(-53%);
+   top: 82px;
+}
+
+#j_footerWrapper .j_footerTxt p {
+   margin-top: 1%;
+}
+
+#j_footerWrapper .j_footerTxt p:first-child {}
+
+#j_footerWrapper .j_footerTxt p:last-child {}
+
+#j_footerWrapper .j_footerTxt span {
+   margin-top: 10px;
+   display: inline-block;
+}
+
+#j_footerWrapper .j_footerButton {
+   right: 0;
+}
+
+#j_footerWrapper .j_footerButton a {
+   display: inline-block;
+   width: 67px;
+   padding-left: 10px;
+   height: 25px;
+   line-height: 25px;
+   background-color: #000;
+   font-size: 11px;
+   color: #888;
+   background: url(../images/ico/bul_01.png) right center no-repeat #151515;
+}
+
+#j_footerWrapper .j_footerButton a:first-child {}
+
+#j_footerWrapper .j_footerButton a:last-child {}
+
+/****** 푸터 끝 ******/
