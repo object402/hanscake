@@ -3,7 +3,7 @@ a {
 }
 /* header */
 header{
-   width: 100%;
+   /*width: 100%;*/
    height: 106px;
    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -138,10 +138,11 @@ header{
 footer{
    background-color: #212121;
    height: 200px;
-   width: 100%;
+   /*width: 100%;*/
    position: absolute;
 }
 #j_footerWrapper{
+   background-color: #212121;
    color: #5a5a5a;
    font-family: 'ng', dotum, Arial, sans-serif;
    font-size: 12px;

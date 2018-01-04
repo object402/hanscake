@@ -30,6 +30,10 @@ $(document).ready(function() {
       }
    }
 
+   //두번째 이미지 백그라운드 크기 변경
+   //$('#j_subject').css({'background-size':fullWidth});
+
+
    var num = 0; //슬라이드 순서
    var show_num = 1; //보여지는 슬라이드 갯수
    var list = $('#j_mainSlideFirst ul'); //슬라이드 마진 기준
@@ -114,5 +118,57 @@ $(document).ready(function() {
       }, 500);
       num = pagingIndex;
 
+      return false;
    });
+
+    var SecondImgLength = $('#j_mainSlideSecond .j_SecondSlideImage li').length;
+    console.log('SecondImgLength:' + SecondImgLength);
+    var SecondImgOrder = $('#j_mainSlideSecond .j_SecondSlideImage li');
+    var num2 = 0;
+
+    SecondImgOrder.eq(num2).fadeIn(500);
+    $('#j_mainSlideSecond .j_SecondSlideTxt li').eq(0).animate({top:540,opacity:1});
+
+   //두번째 슬라이드
+   function playSecondSlide() {
+      num2++; //0부터 1씩 증가
+      console.log('1.num2:' + num2);
+      SecondImgOrder.css({'display':'none'});
+      SecondImgOrder.eq(num2).fadeIn(500);
+      if (num2 == SecondImgLength) {
+         num2 = 0;
+         //마지막이면 순서 0째로 처음으로 돌아가기
+         SecondImgOrder.css({'display':'none'});
+         SecondImgOrder.eq(num2).fadeIn(500);
+      }
+
+      //이미지 아래 텍스트 초기화 + 아래서 위로 올라오고, 오퍼시티 없애기
+      $('#j_mainSlideSecond .j_SecondSlideTxt li').css({'opacity':'0','top':'600px'});
+      $('#j_mainSlideSecond .j_SecondSlideTxt li').eq(num2).animate({top:540,opacity:1});
+
+      if(num2 == SecondImgLength){
+         $('.j_SecondSlideTxt li').eq(0).css({'opacity':'1'});
+      }
+
+      return false;
+   }
+
+   //두번쩨 슬라이드 실행
+   var playSecond = setInterval(playSecondSlide, 3500);
+
+   //    //페이징 클래스 초기화
+   //    $('#j_paging li a').removeClass('j_pagingActive');
+   //    //현재슬라이드 맞는 페이징 활성화하기
+   //    $('#j_paging li a').eq(num).addClass('j_pagingActive');
+   //
+   //    //마지막 슬라이드면 다시 첫번째 페이징 활성화해주기
+   //    if (num == imgLength) {
+   //       $('#j_paging li a').eq(0).addClass('j_pagingActive');
+   //    }
+   //    return false;
+   // }
+
+
+
+
 })
