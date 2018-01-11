@@ -1,5 +1,30 @@
 $(document).ready(function() {
-
+  if ($('.k_contents_nav>ul>li>a').width() == 80) {
+    // is mobile device
+    var cakeWidthMobile = $('.k_showcakes>ul>li').width() - 20;
+    var cakeHeightMobile = $('.k_showcakes>ul>li').height() - 20;
+    console.log(cakeWidthMobile);
+    $('.k_showcakes>ul>li>dl').css({
+      'width': cakeWidthMobile
+    });
+    $('.k_showcakes>ul>li>dl').css({
+      'height': cakeHeightMobile
+    });
+  }
+  $(window).resize(function() {
+    if ($('.k_contents_nav>ul>li>a').width() == 80) {
+      // is mobile device
+      var cakeWidthMobile = $('.k_showcakes>ul>li').width() - 20;
+      var cakeHeightMobile = $('.k_showcakes>ul>li').height() - 20;
+      console.log(cakeWidthMobile);
+      $('.k_showcakes>ul>li>dl').css({
+        'width': cakeWidthMobile
+      });
+      $('.k_showcakes>ul>li>dl').css({
+        'height': cakeHeightMobile
+      });
+    }
+  })
   //케이크정렬
   var cakebox = $('.k_showcakes > ul > li');
 
@@ -81,6 +106,8 @@ $(document).ready(function() {
     })
     console.log(i);
   }
+
+
 
 
 })

@@ -79,10 +79,6 @@
   margin-bottom: 30px;
 }
 
-.story_visual1>img {
-  display: block;
-}
-
 .story_visual1>p {
   padding-top: 40px;
   text-align: center;
@@ -92,6 +88,11 @@
 
 .story_visual1>p>strong {
   font-weight: bold;
+}
+
+.visualbottom>img {
+  width: 100%;
+  display: block;
 }
 
 .story_visual2>span {
@@ -108,4 +109,22 @@
   text-align: center;
   line-height: 30px;
   padding-bottom: 100px;
+}
+
+.mobileImg {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .mobileImg {
+    display: block;
+  }
+  .desktopImg {
+    display: none;
+  }
+  .k_contents {
+    width: 100%;
+    margin: auto;
+    margin-top: 80px;
+  }
 }
