@@ -94,3 +94,40 @@
   position: relative;
   bottom: -150px;
 }
+
+@media screen and (max-width: 640px)  {
+  .k_contents {
+    width: 100%;
+  }
+
+  .k_contents_nav {
+    width: 100%;
+    height: 40px;
+  }
+
+  .k_contents_nav>ul>li>a {
+    width: 80px;
+  }
+
+  .k_showcakes {
+    width: 100%;
+  }
+
+  .k_showcakes>ul>li {
+    width: 50%;
+    float: left;
+    position: relative;
+  }
+
+  .k_showcakes>ul>li>dl {
+    text-align: center;
+    left: 14px;
+    top: 14px;
+    color: white;
+    border-radius: 10%;
+    line-height: 30px;
+    padding-top: 90px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+}
