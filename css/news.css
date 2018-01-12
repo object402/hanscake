@@ -297,7 +297,13 @@ section.p_news h1::after {
 
 .p_paging {
   margin: auto;
+  margin-bottom: 50px;
   width: 400px;
+}
+.p_paging::after{
+  display: block;
+  content:"";
+  clear:both;
 }
 
 /* right / left button */

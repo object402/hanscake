@@ -182,6 +182,7 @@ section.p_store h1::after {
   background: #f8f2ea;
 }
 
+
 .p_store_list:hover {
   border-bottom: 5px solid #ff552ec2;
   /* #ff552e  */
@@ -350,7 +351,13 @@ section.p_store h1::after {
 
 .p_paging {
   margin: auto;
+  margin-bottom: 50px;
   width: 400px;
+}
+.p_paging::after{
+  display: block;
+  content:"";
+  clear:both;
 }
 
 /* right / left button */
