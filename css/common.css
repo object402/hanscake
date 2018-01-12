@@ -1,20 +1,50 @@
 a {
    color: #1a1a1a;
 }
-/* header */
-header{
-   /*width: 100%;*/
+
+/* #j_allWrapper {
+   width: 100%;
+   min-width: 1000px;
+} */
+
+/****** 헤더 시작 ******/
+
+header {
+   /* width: 1000px; */
    height: 106px;
+   /* margin: 0 auto; */
    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   /* position: relative; */
 }
+
 #header_wrapper {
    width: 1000px;
    height: inherit;
    margin: 0 auto;
    position: relative;
-   z-index:9999;
+   z-index: 9999;
+}
+
+@media screen and (max-width:640px){
+   header{
+      height: 51px;
+   }
+   #header_wrapper{
+      width: 100%;
+      height: inherit;
+      margin: 0 auto;
+      position: relative;
+      z-index: 9998;
+   }
+   .main_nav li{
+      display: none;
+   }
+   #allMenu {
+      display: none;
+   }
 }
 /* 로고 */
+
 #logo {
    display: inline-block;
    position: absolute;
@@ -33,10 +63,12 @@ header{
 #allMenu {
    display: none;
 }
+
 /* 네비 */
+
 .main_nav {
    position: absolute;
-   bottom:0;
+   bottom: 0;
    left: 50%;
    transform: translateX(-50%);
    width: 640px;
@@ -44,7 +76,7 @@ header{
 }
 
 .main_nav>li {
-    float: left;
+   float: left;
 }
 
 .main_nav>li>a {
@@ -72,25 +104,26 @@ header{
    height: 30px;
    line-height: 30px;
    display: none;
-   margin-left:34px;
-   bottom:-30px;
+   margin-left: 34px;
+   bottom: -30px;
 }
-.main_nav>li:nth-child(3) .sub_nav{
-   margin-left:0;
-}
-.main_nav>li:nth-child(1):hover .sub_nav,
-.main_nav>li:nth-child(2):hover .sub_nav,
-.main_nav>li:nth-child(3):hover .sub_nav{
+
+/* .main_nav>li:nth-child(3) .sub_nav {
+   margin-left: 0;
+} */
+
+.main_nav>li:nth-child(1):hover .sub_nav, .main_nav>li:nth-child(2):hover .sub_nav, .main_nav>li:nth-child(3):hover .sub_nav {
    display: block;
    z-index: 9999;
 }
-.main_nav>li:hover>a{
+
+.main_nav>li:hover>a {
    color: #e84a36;
 }
-.sub_nav>li:hover>a{
+
+.sub_nav>li:hover>a {
    text-decoration: underline;
 }
-
 
 .sub_nav>li {
    display: inline-block;
@@ -104,17 +137,19 @@ header{
    padding: 0 25px;
    color: #fff;
 }
-.sub_nav>li:last-child>a{
+
+.sub_nav>li:last-child>a {
    border-right: 1px solid rgba(0, 0, 0, 0);
 }
 
 /* 메인네비:인스타, 페이스북 버튼 */
+
 #header_btn {
    clear: both;
    display: inline-block;
    position: absolute;
    top: 50%;
-   right: 40px;
+   right: 0;
 }
 
 #header_btn>a {
@@ -126,28 +161,19 @@ header{
 
 #header_btn>a>img {}
 
-/* section */
-/* section{
-   display: block;
-   height: 500px;
-<<<<<<< HEAD
-   /* background-color: tomato; */
-}
-/* =======
-   background-color: tomato;
-} */
+/****** 헤더 끝 ******/
 
 
+/****** 푸터 시작 ******/
 
-/* footer */
-footer{
-   background-color:#212121;
+footer {
+   background-color: #212121;
    height: 200px;
    /*width: 100%;*/
-   position: absolute;
+   position: relative;
 }
 
-#j_footerWrapper{
+#j_footerWrapper {
    background-color: #212121;
    color: #5a5a5a;
    font-family: 'ng', dotum, Arial, sans-serif;
@@ -157,34 +183,44 @@ footer{
    margin: 0 auto;
    position: relative;
 }
-#j_footerWrapper div{
+
+#j_footerWrapper div {
    position: absolute;
    display: inline-block;
    margin-left: 2%;
    top: 50%;
    transform: translateY(-50%);
 }
-#j_footerWrapper .j_footerLogo{}
-#j_footerWrapper .j_footerLogo img{}
-#j_footerWrapper .j_footerTxt{
+
+#j_footerWrapper .j_footerLogo {}
+
+#j_footerWrapper .j_footerLogo img {}
+
+#j_footerWrapper .j_footerTxt {
    width: 635px;
-    left: 49%;
-    transform: translateX(-53%);
+   left: 49%;
+   transform: translateX(-53%);
    top: 82px;
 }
-#j_footerWrapper .j_footerTxt p{
+
+#j_footerWrapper .j_footerTxt p {
    margin-top: 1%;
 }
-#j_footerWrapper .j_footerTxt p:first-child{}
-#j_footerWrapper .j_footerTxt p:last-child{}
-#j_footerWrapper .j_footerTxt span{
+
+#j_footerWrapper .j_footerTxt p:first-child {}
+
+#j_footerWrapper .j_footerTxt p:last-child {}
+
+#j_footerWrapper .j_footerTxt span {
    margin-top: 10px;
    display: inline-block;
 }
-#j_footerWrapper .j_footerButton{
+
+#j_footerWrapper .j_footerButton {
    right: 0;
 }
-#j_footerWrapper .j_footerButton a{
+
+#j_footerWrapper .j_footerButton a {
    display: inline-block;
    width: 67px;
    padding-left: 10px;
@@ -195,5 +231,9 @@ footer{
    color: #888;
    background: url(../images/ico/bul_01.png) right center no-repeat #151515;
 }
-#j_footerWrapper .j_footerButton a:first-child{}
-#j_footerWrapper .j_footerButton a:last-child{}
+
+#j_footerWrapper .j_footerButton a:first-child {}
+
+#j_footerWrapper .j_footerButton a:last-child {}
+
+/****** 푸터 끝 ******/
