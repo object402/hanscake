@@ -46,35 +46,6 @@ $(document).ready(function() {
    list.append(copyObj);
    console.log('LIST1: ' + list.width());
 
-   //*********************
-   //윈도우창 크기 조절 되었을때
-   $(window).resize(function() {
-
-      //윈도우 사이즈 다시 구하기
-      fullWidth = $(window).innerWidth();
-      if(fullWidth <= 1000){
-         fullWidth = 1000;
-      }
-      //전체슬라이드 ul width값 다시 구하기
-      ulWidth = ((fullWidth * imgLength) + fullWidth);
-
-      list = $('#j_mainSlideFirst ul');
-
-      //슬라이드 보여주는 크기 = 변경된 윈도우 사이즈
-      $('#j_mainSlideFirst').css({
-         width: fullWidth
-      })
-      //슬라이드 이미지 width값에 변경된 윈도우 사이즈 적용하기
-      $('#j_mainSlideFirst>ul>li>a>img').css({
-         width: fullWidth
-      });
-      //전체 슬라이드 ul width값 주기
-      $('#j_mainSlideFirst>ul').css({
-         width: ulWidth
-      });
-      console.log('LIST2: ' + list.width());
-
-   })
 
 
    //첫번째 슬라이드 기능
@@ -104,7 +75,7 @@ $(document).ready(function() {
    }
 
    //첫번째 슬라이드 실행
-   var play = setInterval(playMainSlide, 3500);
+   var play = setInterval(playMainSlide, 5000);
 
    //첫번째 슬라이드 페이징 버튼
    $('#j_paging').on('click', 'a', function() {
@@ -127,18 +98,19 @@ $(document).ready(function() {
       return false;
    });
 
+
     var SecondImgLength = $('#j_mainSlideSecond .j_SecondSlideImage li').length;
     console.log('SecondImgLength:' + SecondImgLength);
     var SecondImgOrder = $('#j_mainSlideSecond .j_SecondSlideImage li');
     var num2 = 0;
 
     SecondImgOrder.eq(num2).fadeIn(700);
-    $('#j_mainSlideSecond .j_SecondSlideTxt li').eq(0).animate({top:540,opacity:1},700);
+    $('#j_mainSlideSecond .j_SecondSlideTxt li').stop().eq(0).animate({top:540,opacity:1},700).css({'display':'block'});
+
 
    //두번째 슬라이드
    function playSecondSlide() {
       num2++; //0부터 1씩 증가
-      console.log('1.num2:' + num2);
       SecondImgOrder.css({'display':'none'});
       SecondImgOrder.eq(num2).fadeIn(700);
       if (num2 == SecondImgLength) {
@@ -149,26 +121,77 @@ $(document).ready(function() {
       }
 
       //이미지 아래 텍스트 초기화 + 아래서 위로 올라오고, 오퍼시티 없애기
-      $('#j_mainSlideSecond .j_SecondSlideTxt li').css({'opacity':'0','top':'600px'});
-      $('#j_mainSlideSecond .j_SecondSlideTxt li').eq(num2).animate({top:540,opacity:1},700);
+      $('#j_mainSlideSecond .j_SecondSlideTxt li').css({'opacity':'0','top':'600px','display':'none'});
+      $('#j_mainSlideSecond .j_SecondSlideTxt li').stop().eq(num2).animate({top:540,opacity:1},700).css({'display':'block'});
       if(num2 == SecondImgLength){
-         $('#j_mainSlideSecond .j_SecondSlideTxt li').css({'opacity':'0','top':'600px'});
-         $('.j_SecondSlideTxt li').eq(0).css({'opacity':'1'});
+         $('#j_mainSlideSecond .j_SecondSlideTxt li').css({'opacity':'0','top':'600px','display':'none'});
+         $('.j_SecondSlideTxt li').stop().eq(0).animate({top:540,opacity:1},700).css({'display':'block'});
+         //$('.j_SecondSlideTxt li').eq(0).css({'opacity':'1'});
       }
-
-      //next 버튼 클릭 시
-      $('#buttons a:last-child').on('click',function(){
-         console.log('nextbuttonclicked');
-         // num2 += 1;
-         // $('#j_mainSlideSecond .j_SecondSlideTxt li').css({'opacity':'0','top':'600px'});
-         // $('#j_mainSlideSecond .j_SecondSlideTxt li').eq(num2).animate({top:540,opacity:1},700);
-      })
 
       return false;
    }
 
-   //두번쩨 슬라이드 실행
-   var playSecond = setInterval(playSecondSlide, 3500);
+      //두번쩨 슬라이드 실행
+      var playSecond = setInterval(playSecondSlide, 5000);
+
+   //next 버튼 클릭 시
+   $('#buttons a:last-child').on('click',function(e){
+      e.preventDefault();
+       clearInterval(playSecond);
+      num2 += 1;
+      SecondImgOrder.css({'display':'none'});
+      SecondImgOrder.eq(num2).fadeIn(700);
+      if (num2 == SecondImgLength) {
+         num2 = 0;
+         //마지막이면 순서 0째로 처음으로 돌아가기
+         SecondImgOrder.css({'display':'none'});
+         SecondImgOrder.eq(num2).fadeIn(700);
+      }
+
+      if(num2 == SecondImgLength){
+         $('#j_mainSlideSecond .j_SecondSlideTxt li').css({'opacity':'0','top':'600px','display':'none'});
+         $('.j_SecondSlideTxt li').stop().eq(0).animate({top:540,opacity:1},700).css({'display':'block'});
+      }
+      $('#j_mainSlideSecond .j_SecondSlideTxt li').css({'opacity':'0','top':'600px','display':'none'});
+      $('#j_mainSlideSecond .j_SecondSlideTxt li').stop().eq(num2).animate({top:540,opacity:1},700).css({'display':'block'});
+      playSecond = setInterval(playSecondSlide, 3500);
+   })
+
+   //prev 버튼 클릭 시
+   $('#buttons a:first-child').on('click',function(e){
+      e.preventDefault();
+       clearInterval(playSecond);
+      num2 -= 1;
+      SecondImgOrder.css({'display':'none'});
+      SecondImgOrder.eq(num2).fadeIn(700);
+      if (num2 == -(SecondImgLength+1)) {
+         num2 = -1;
+         //마지막이면 순서 0째로 처음으로 돌아가기
+         SecondImgOrder.css({'display':'none'});
+         SecondImgOrder.eq(num2).fadeIn(700);
+      }
+
+      if(num2 == -(SecondImgLength+1)){
+         $('#j_mainSlideSecond .j_SecondSlideTxt li').css({'opacity':'0','top':'600px','display':'none'});
+         $('.j_SecondSlideTxt li').stop().eq(num2).animate({top:540,opacity:1},700).css({'display':'block'});
+      }
+      $('#j_mainSlideSecond .j_SecondSlideTxt li').css({'opacity':'0','top':'600px','display':'none'});
+      $('#j_mainSlideSecond .j_SecondSlideTxt li').stop().eq(num2).animate({top:540,opacity:1},700).css({'display':'block'});
+      playSecond = setInterval(playSecondSlide, 3500);
+
+      console.log('prevNum2:' + num2);
+   })
+
+   //2번째 슬라이드 view 버튼 a 링크 디폴트 시키기
+   $('#j_mainSlideSecond .j_SecondSlideTxt li a').click(function(){
+      return false;
+   })
+   //마지막 컨텐츠들 a 링크 디폴트 시키기
+   $('#j_mainContentsThird a').click(function(){
+      return false;
+   })
+
 
    //    //페이징 클래스 초기화
    //    $('#j_paging li a').removeClass('j_pagingActive');
@@ -183,6 +206,39 @@ $(document).ready(function() {
    // }
 
 
+   //*********************
+   //윈도우창 크기 조절 되었을때
+   $(window).resize(function() {
 
+      //clearInterval(playMainSlide);
+
+     //윈도우 사이즈 다시 구하기
+     fullWidth = $(window).innerWidth();
+     if(fullWidth <= 1000){
+        fullWidth = 1000;
+     }
+     //641px~1000px
+
+     //전체슬라이드 ul width값 다시 구하기
+     ulWidth = ((fullWidth * imgLength) + fullWidth);
+
+     list = $('#j_mainSlideFirst ul');
+
+     //슬라이드 보여주는 크기 = 변경된 윈도우 사이즈
+     $('#j_mainSlideFirst').css({
+        width: fullWidth
+     })
+     //슬라이드 이미지 width값에 변경된 윈도우 사이즈 적용하기
+     $('#j_mainSlideFirst>ul>li>a>img').css({
+        width: fullWidth
+     });
+     //전체 슬라이드 ul width값 주기
+     $('#j_mainSlideFirst>ul').css({
+        width: ulWidth
+     });
+     console.log('LIST2: ' + list.width());
+
+   })
+   //**************************
 
 })
