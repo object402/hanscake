@@ -144,9 +144,9 @@
 @media screen and (max-width:640px) {
 
 /* header footer display none */
-  header,footer{
+  /* header,footer{
     display:none;
-  }
+  } */
   .p_be_a_family_banner{
     display:none;
   }
@@ -180,21 +180,4 @@
     margin-top:10%;
   }
 
-
-
 }
-
-/* @media screen and (max-width:620px){
-  .p_picto_list ul {
-      width: 50%;
-      height: 50%;
-  }
-}
-
-@media screen and (max-width:414px){
-
-  .p_picto_list ul {
-      width: 36%;
-      height: 50%;
-  }
-} */

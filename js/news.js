@@ -2,14 +2,16 @@ $(document).ready(function() {
 
   // content show and hidden
   $('.p_news_list').click(function(){
-    // $('.p_list_hidden').removeClass('on');
-    $(this).find($('.p_list_hidden')).toggleClass('on');
 
+    $(this).find($('.p_list_hidden')).toggleClass('on');
+    
   })
 
  //  plus hide and show
   $('.p_news_list').click(function(){
+
     $(this).find($('.p_news_list_plus span')).toggleClass('on');
+
 });
 
   //  pagination start

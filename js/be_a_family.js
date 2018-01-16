@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   $('.p_no').css({
     "opacity": "0"
   }).delay(300).animate({

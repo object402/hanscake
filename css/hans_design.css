@@ -354,9 +354,9 @@ section.p_section_all_wrap_3 {
 
 @media screen and (max-width:640px) {
 /* footer header display none */
-  footer,header{
+  /* footer,header{
     display: none;
-  }
+  } */
 
   /* banner and title */
   .p_hans_design_banner{

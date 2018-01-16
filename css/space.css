@@ -171,9 +171,9 @@ section.p_space{
 /* media start */
 
 @media screen and (max-width : 640px){
-  header, footer{
+  /* header, footer{
     display: none;
-  }
+  } */
   section.p_space{
     margin:auto;
     width:100%;

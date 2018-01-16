@@ -429,9 +429,9 @@ section.p_store h1::after {
 
 @media screen and (max-width:640px) {
   /* footer header display none  */
-  header, footer {
+  /* header, footer {
     display: none;
-  }
+  } */
   /* banner display none */
   .p_store_banner {
     display: none;
