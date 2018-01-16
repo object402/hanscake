@@ -185,6 +185,8 @@
 }
 
 .j_mainContentsThird_first a {
+   width: 100%;
+   overflow: hidden;
    display: block;
    position: relative;
 }
@@ -195,8 +197,9 @@
 }
 
 .j_mainContentsThird_first a div {
+   box-sizing: border-box;
    display: block;
-   width: 430px;
+   width: 100%;
    padding: 30px;
    position: absolute;
    bottom: 0px;
@@ -233,6 +236,8 @@
 .j_mainContentsThird_second a {
    display: block;
    position: relative;
+   width: 100%;
+   overflow: hidden;
 }
 
 .j_mainContentsThird_second a img {
@@ -242,8 +247,9 @@
 
 .j_mainContentsThird_second a div {
    display: block;
+   box-sizing: border-box;
    position: absolute;
-   width: 430px;
+   width: 100%;
    padding: 30px;
    bottom: 0px;
    margin-top: -50px;
@@ -280,6 +286,8 @@
 
 .j_mainContentsThird_third a {
    display: block;
+   width: 100%;
+   overflow: hidden;
    position: relative;
 }
 
@@ -290,8 +298,9 @@
 
 .j_mainContentsThird_third a div {
    display: block;
+   box-sizing: border-box;
    position: absolute;
-   width: 430px;
+   width: 100%;
    padding: 30px;
    bottom: 0;
    font-size: 16px;
@@ -362,11 +371,11 @@
    display: block;
    position: relative;
    float: right;
-   width: 231px;
+   width: 239px;
    height: 467.8px;
-   border: 4px solid #fff0;
+   /* border: 4px solid #fff0; */
 }
-.j_mainContentsThird_fourth .store:hover{
+.j_mainContentsThird_fourth .store .j_imgBox:hover{
    transition: 0.4s;
    border: 4px solid #e84a36;
 }
@@ -374,6 +383,7 @@
 .j_mainContentsThird_fourth .store .j_imgBox {
    display: block;
    padding-top: 105px;
+   border: 4px solid #fff0;
 }
 
 .j_mainContentsThird_fourth .store img {
@@ -388,7 +398,7 @@
    top: 0px;
    /* padding-top: 17px; */
    display: block;
-   height: 71px;
+   /* height: 71px; */
    font-size: 14px;
    color: #4a4a4a;
    line-height: 18px;
@@ -408,3 +418,186 @@
 .j_mainContentsThird_fourth .store div p:last-child {}
 
 /****** 마지막 컨텐츠 끝 ******/
+
+
+
+/********미디어 스크린************/
+@media screen and (max-width: 640px){
+   #j_allWrapper {
+      width: 100%;
+      min-width:100px;
+      max-width: 640px;
+   }
+   #j_mainSlideFirst, #j_mainSlideSecond{
+      display: none;
+   }
+   header, footer{
+      display: none;
+   }
+
+   /****** 마지막 컨텐츠 시작 ******/
+
+   #j_mainContentsThird {
+      height: auto;
+      max-width: 640px;
+    width: 100%;
+    padding-top: 100px;
+      /* background-color: lightpink; */
+   }
+
+   #j_mainContentsThird_Wrap {
+      width: 100%;
+    height: auto;
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+   }
+
+   #j_mainContentsThird_Wrap>div {
+      position: relative;
+   }
+
+   .j_mainContentsThird_first {
+      width: auto;
+    max-width: 640px;
+    left: inherit;
+    top: inherit;
+    padding: 0 15px;
+    margin-bottom: 15px;
+      border: 4px solid #fff0;
+   }
+   .j_mainContentsThird_first:hover{
+      margin-bottom:15px;
+      border: 4px solid #e84a36;
+      transition: 0.4s;
+   }
+
+   .j_mainContentsThird_first a img {
+      width: 100%;
+      vertical-align: top;
+      border: none;
+   }
+
+
+   .j_mainContentsThird_second {
+      width: auto;
+    right: inherit;
+    top: inherit;
+    border: 4px solid #fff0;
+    padding: 0 15px;
+    margin-bottom: 30px;
+   }
+   .j_mainContentsThird_second:hover{
+      border: 4px solid #e84a36;
+      transition: 0.4s;
+   }
+
+
+
+   .j_mainContentsThird_second a img {
+      vertical-align: top;
+      border: none;
+      width:100%;
+   }
+
+   .j_mainContentsThird_second a div {
+      display: block;
+    position: absolute;
+    width: 100%;
+    padding: 30px;
+    margin-top: -50px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+      background: linear-gradient( to bottom, #00000000, #000000cc 95%);
+   }
+
+   .j_mainContentsThird_third {
+      width: auto;
+      padding: 0 15px;
+      margin-bottom: 30px;
+      left: inherit;
+      top: inherit;
+      border: 4px solid #fff0;
+   }
+   .j_mainContentsThird_third:hover{
+      border: 4px solid #e84a36;
+      transition: 0.4s;
+   }
+
+   .j_mainContentsThird_third a img {
+      vertical-align: top;
+      border: 0;
+      width: 100%;
+   }
+
+   .j_mainContentsThird_fourth {
+      width: auto;
+      padding: 0;
+      margin-bottom: 30px;
+      position: relative;
+      right: inherit;
+      top: inherit;
+      overflow: hidden;
+   }
+
+   .j_mainContentsThird_fourth .news {
+      width: 47%;
+   }
+   .j_mainContentsThird_fourth .news:hover{
+      transition: 0.4s;
+      border: 4px solid #e84a36;
+   }
+
+   .j_mainContentsThird_fourth .news img {
+      width: 100%;
+      vertical-align: top;
+      border: 0px;
+   }
+
+   .j_mainContentsThird_fourth .news div {
+      display: block;
+      padding:9px 10px 0 0;
+      font-size: 14px;
+      color: #4a4a4a;
+      line-height: 18px;
+   }
+
+   .j_mainContentsThird_fourth .store {
+      width: 47%;
+      /* border: 4px solid #fff0; */
+   }
+   /* .j_mainContentsThird_fourth .store:hover{
+      transition: 0.4s;
+      border: 4px solid #e84a36;
+   } */
+
+   .j_mainContentsThird_fourth .store .j_imgBox {
+      width: 100%;
+      display: block;
+      padding-top: 0;
+   }
+
+   .j_mainContentsThird_fourth .store img {
+      display: block;
+      width:100%;
+      padding-top: 86px;
+      vertical-align: top;
+      border: 0px;
+   }
+
+   .j_mainContentsThird_fourth .store div {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      /* padding-top: 17px; */
+      display: block;
+      height: 71px;
+      font-size: 14px;
+      color: #4a4a4a;
+      line-height: 18px;
+   }
+
+   /****** 마지막 컨텐츠 끝 ******/
+}
