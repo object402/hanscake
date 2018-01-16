@@ -113,6 +113,9 @@
 /*텍스트*/
 
 #j_mainSlideSecond .j_SecondSlideTxt {}
+#j_mainSlideSecond .j_SecondSlideTxt .j_hideBr_title_smallest{
+   display: none;
+}
 
 #j_mainSlideSecond .j_SecondSlideTxt li {
    position: absolute;
@@ -124,6 +127,9 @@
    top: 600px;
    right: 50%;
    transform: translateX(50%);
+}
+#j_mainSlideSecond .j_SecondSlideTxt .j_hideBr{
+   display: none;
 }
 
 #j_mainSlideSecond .j_SecondSlideTxt li p>strong {
@@ -431,8 +437,76 @@
       max-width: 640px;
    }
 /*******두번째 슬라이드*********/
+
+#j_mainSlideSecond {
+   height: 472px;
+}
+
+#j_subject {
+   height: 80px;
+   background-size: 100%;
+   margin: 20px 0;
+}
+
+#buttons {
+   top: 50px;
+}
+
+#buttons a {
+}
+#buttons a img{
+   width: 50px;
+}
+#buttons a:first-child {
+   left: 10%;
+}
+
+#buttons a:last-child {
+   right:10%;
+}
+
+#buttons a img {}
+
+/*이미지*/
+
+#j_mainSlideSecond .j_SecondSlideImage {}
+
+#j_mainSlideSecond .j_SecondSlideImage li {
+}
+
 #j_mainSlideSecond .j_SecondSlideImage li img {
    width: 100%;
+}
+
+/*텍스트*/
+
+#j_mainSlideSecond .j_SecondSlideTxt {}
+
+#j_mainSlideSecond .j_SecondSlideTxt li {
+   top: 365px;
+   width: 100%;
+}
+#j_mainSlideSecond .j_SecondSlideTxt .j_hideBr{
+   display: inline-block;
+   line-height: 22px;
+}
+
+#j_mainSlideSecond .j_SecondSlideTxt li p>strong {
+   font-size: 23px;
+}
+
+#j_mainSlideSecond .j_SecondSlideTxt li p:nth-child(2) {
+   font-size: 14px;
+}
+
+#j_mainSlideSecond .j_SecondSlideTxt li a {
+   margin-top: 0;
+}
+
+#j_mainSlideSecond .j_SecondSlideTxt li a img {}
+
+#j_bg {
+   height: 270px
 }
 
 
@@ -603,4 +677,24 @@
    }
    /****** 마지막 컨텐츠 끝 ******/
 
+}
+@media screen and (max-width: 376px){
+   .j_mainContentsThird_fourth a div p:last-child {
+    display: none;
+}
+.j_mainContentsThird_fourth .store img {
+    padding-top: 50px;
+   }
+#j_mainSlideSecond .j_SecondSlideTxt li p:nth-child(2){
+   display: none
+}
+#j_mainSlideSecond .j_SecondSlideTxt li a{
+   margin-top: 10px;
+}
+#j_mainSlideSecond .j_SecondSlideImage li{
+   top: 26%;
+}
+#j_mainSlideSecond .j_SecondSlideTxt .j_hideBr_title_smallest{
+   display: inline-block;
+}
 }
