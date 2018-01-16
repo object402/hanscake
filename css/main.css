@@ -21,9 +21,9 @@
 
 #j_mainSlideFirst ul li a {}
 
-#j_mainSlideFirst ul li a img {
+/* #j_mainSlideFirst ul li a img {
    min-width: 1000px;
-}
+} */
 
 /* 페이징 */
 
@@ -106,7 +106,9 @@
    display: none;
 }
 
-#j_mainSlideSecond .j_SecondSlideImage li img {}
+/* #j_mainSlideSecond .j_SecondSlideImage li img {
+   width: 100%;
+} */
 
 /*텍스트*/
 
@@ -428,12 +430,11 @@
       min-width:100px;
       max-width: 640px;
    }
-   #j_mainSlideFirst, #j_mainSlideSecond{
-      display: none;
-   }
-   header, footer{
-      display: none;
-   }
+/*******두번째 슬라이드*********/
+#j_mainSlideSecond .j_SecondSlideImage li img {
+   width: 100%;
+}
+
 
    /****** 마지막 컨텐츠 시작 ******/
 
@@ -468,8 +469,7 @@
    }
    .j_mainContentsThird_first:hover{
       margin-bottom:15px;
-      border: 4px solid #e84a36;
-      transition: 0.4s;
+      border: 4px solid #fff0;
    }
 
    .j_mainContentsThird_first a img {
@@ -488,7 +488,7 @@
     margin-bottom: 30px;
    }
    .j_mainContentsThird_second:hover{
-      border: 4px solid #e84a36;
+      border: 4px solid #fff0;
       transition: 0.4s;
    }
 
@@ -522,7 +522,7 @@
       border: 4px solid #fff0;
    }
    .j_mainContentsThird_third:hover{
-      border: 4px solid #e84a36;
+      border: 4px solid #fff0;
       transition: 0.4s;
    }
 
@@ -547,7 +547,7 @@
    }
    .j_mainContentsThird_fourth .news:hover{
       transition: 0.4s;
-      border: 4px solid #e84a36;
+      border: 4px solid #fff0;
    }
 
    .j_mainContentsThird_fourth .news img {
@@ -570,7 +570,7 @@
    }
    /* .j_mainContentsThird_fourth .store:hover{
       transition: 0.4s;
-      border: 4px solid #e84a36;
+      border: 4px solid #fff0;
    } */
 
    .j_mainContentsThird_fourth .store .j_imgBox {
@@ -578,7 +578,10 @@
       display: block;
       padding-top: 0;
    }
-
+   .j_mainContentsThird_fourth .store .j_imgBox:hover{
+      transition: 0.4s;
+      border: 4px solid #fff0;
+   }
    .j_mainContentsThird_fourth .store img {
       display: block;
       width:100%;
@@ -598,6 +601,6 @@
       color: #4a4a4a;
       line-height: 18px;
    }
-
    /****** 마지막 컨텐츠 끝 ******/
+
 }

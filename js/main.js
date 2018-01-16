@@ -2,9 +2,11 @@
 $(document).ready(function() {
    //윈도우 사이즈 구하기
    var fullWidth = $(window).innerWidth();
-   if(fullWidth <= 1000){
-      fullWidth = 1000;
-   }
+   if(fullWidth > 640 && fullWidth <= 1000 ){
+     fullWidth = 1000;
+ }else if(fullWidth <= 640){
+         fullWidth = $(window).innerWidth();
+}
    //슬라이드 갯수 구하기
    var imgLength = $('#j_mainSlideFirst>ul>li').length;
    //전체슬라이드 ul width값 구하기
@@ -206,6 +208,8 @@ $(document).ready(function() {
    // }
 
 
+
+
    //*********************
    //윈도우창 크기 조절 되었을때
    $(window).resize(function() {
@@ -215,9 +219,11 @@ $(document).ready(function() {
      //윈도우 사이즈 다시 구하기
      fullWidth = $(window).innerWidth();
 
-     if(fullWidth <= 1000 ){
+     if(fullWidth > 640 && fullWidth <= 1000 ){
        fullWidth = 1000;
-    }
+    }else if(fullWidth <= 640){
+           fullWidth = $(window).innerWidth();
+   }
 
 
      //전체슬라이드 ul width값 다시 구하기
@@ -240,6 +246,8 @@ $(document).ready(function() {
      console.log('LIST2: ' + list.width());
 
    })
+
+
    //**************************
 
 })
