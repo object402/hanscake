@@ -3,6 +3,14 @@
   width: 1000px;
   margin: auto;
   margin-top: 80px;
+      margin-bottom: 50px;
+  min-height: 1000px;
+}
+
+.k_contents::after {
+  display: block;
+  content: "";
+  clear: both;
 }
 
 .k_contents_nav {
@@ -55,5 +63,6 @@
     width: 100%;
     margin: auto;
     margin-top: 80px;
+    margin-bottom: 50px;
   }
 }

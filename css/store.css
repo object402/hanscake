@@ -442,6 +442,7 @@ section.p_store h1::after {
     margin: auto;
     font-size: 30px;
     font-weight: bold;
+    padding:0;
   }
   section.p_store {
     width: 100%;
