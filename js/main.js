@@ -214,10 +214,11 @@ $(document).ready(function() {
 
      //윈도우 사이즈 다시 구하기
      fullWidth = $(window).innerWidth();
-     if(fullWidth <= 1000){
-        fullWidth = 1000;
-     }
-     //641px~1000px
+
+     if(fullWidth <= 1000 ){
+       fullWidth = 1000;
+    }
+
 
      //전체슬라이드 ul width값 다시 구하기
      ulWidth = ((fullWidth * imgLength) + fullWidth);
