@@ -1,4 +1,5 @@
 $(function() {
+   $('#allMenu>a>img').addClass('hamburger');
    //햄버거 버튼 클릭하면
    $('#allMenu>a').on('click', function() {
 
