@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  if ($('.k_contents_nav>ul>li>a').width() == 80) {
+  if ($('.k_contents_nav>ul>li>a').width() < 80) {
     // is mobile device
     var cakeWidthMobile = $('.k_showcakes>ul>li').width() - 20;
     var cakeHeightMobile = $('.k_showcakes>ul>li').height() - 20;
@@ -12,7 +12,7 @@ $(document).ready(function() {
     });
   }
   $(window).resize(function() {
-    if ($('.k_contents_nav>ul>li>a').width() == 80) {
+    if ($('.k_contents_nav>ul>li>a').width() < 80) {
       // is mobile device
       var cakeWidthMobile = $('.k_showcakes>ul>li').width() - 20;
       var cakeHeightMobile = $('.k_showcakes>ul>li').height() - 20;
@@ -23,6 +23,17 @@ $(document).ready(function() {
       $('.k_showcakes>ul>li>dl').css({
         'height': cakeHeightMobile
       });
+    }else {
+      var cakeWidthMobile = $('.k_showcakes>ul>li').width() - 20;
+      var cakeHeightMobile = $('.k_showcakes>ul>li').height() - 20;
+      console.log(cakeWidthMobile);
+      $('.k_showcakes>ul>li>dl').css({
+        'width': cakeWidthMobile
+      });
+      $('.k_showcakes>ul>li>dl').css({
+        'height': cakeHeightMobile
+      });
+    
     }
     var cakebox = $('.k_showcakes > ul > li');
     var headerW = $('#header_wrapper').width();
