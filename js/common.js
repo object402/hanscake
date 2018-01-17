@@ -2,6 +2,15 @@ $(function() {
    //햄버거 버튼 클릭하면
    $('#allMenu>a').on('click', function() {
 
+      if ($('#allMenu>a>img').hasClass('hamburger')) {
+         $('#allMenu>a>img').attr({
+            'src': 'images/ico/btn_all_menu_x.png'
+         }).addClass('hamburger_close').removeClass('hamburger');
+      } else {
+         $('#allMenu>a>img').attr({
+            'src': 'images/ico/btn_all_menu.gif'
+         }).removeClass('hamburger_close').addClass('hamburger');
+      }
       $('#allMenu .j_mobile_mainMenu').toggleClass('onMainNav');
 
       //메인메뉴 클릭하면

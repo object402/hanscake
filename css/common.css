@@ -180,11 +180,12 @@ header {
       right: 15px;
       top: 15px;
    }
+
    #allMenu>a>img{
       height: 19px;
       width: 26px;
    }
-   
+
    #allMenu .j_mobile_mainMenu{
       display: none;
    }
@@ -363,7 +364,7 @@ footer {
 
    #j_footerWrapper .j_footerButton {
       left: 70px;
-      top: 125px;
+      top: 118px;
    }
 
    #j_footerWrapper .j_footerButton a {
