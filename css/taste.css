@@ -143,4 +143,19 @@
     font-size: 12px;
     line-height: 20px;
   }
+  .k_contents_nav>ul {
+    overflow: hidden;
+  }
+  .k_contents_nav>ul>li {
+    padding: 0;
+    width: 20%;
+  }
+  .k_contents_nav>ul>li:last-child {
+    margin-right: 0;
+  }
+  .k_contents_nav>ul>li>a {
+    width: auto;
+    font-size: 11px;
+    min-width: 40px;
+  }
 }
