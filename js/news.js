@@ -1,18 +1,21 @@
 $(document).ready(function() {
 
-  // content show and hidden
-  $('.p_news_list').click(function(){
+// list slide toggle
 
-    $(this).find($('.p_list_hidden')).toggleClass('on');
+  $('.p_news_list').on('click',function(){
+    $('.p_news_list_plus span').removeClass('on');
+        $('.p_news_list .p_list_hidden').stop().slideUp(300);
+    $(this).find($('.p_list_hidden')).stop().slideToggle(300);
     
-  })
+    $(this).find($('.p_news_list_plus span')).toggleClass('on');
+  });
 
  //  plus hide and show
-  $('.p_news_list').click(function(){
-
-    $(this).find($('.p_news_list_plus span')).toggleClass('on');
-
-});
+//   $('.p_news_list').click(function(){
+//     $('.p_news_list_plus span').removeClass('on');
+//
+//
+// });
 
   //  pagination start
 

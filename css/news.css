@@ -219,8 +219,9 @@ section.p_news h1::after {
 }
 
 .p_list_hidden img {
+  display: block;
   padding-bottom: 50px;
-  s width: 600px;
+  width: 600px;
   height: 600px;
 }
 
@@ -253,6 +254,7 @@ section.p_news h1::after {
 .p_news_list_content_wrap h3 {
   display: block;
   float: left;
+  width:1000px;
   padding-bottom: 18px;
   font-size: 18px;
   font-weight: bold;
@@ -448,7 +450,7 @@ margin: 0;
     font-size: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 99%;
+    width:100%;
   }
   /* img */
   .p_list_hidden img{
