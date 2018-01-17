@@ -349,5 +349,14 @@ section.p_space{
         margin-top: 26px;
 
   }
-
+  .p_space_contents_2_photo::after{
+    content:"";
+    clear:both;
+    display: block;
+  }
+  .p_space::after{
+    content:"";
+    clear:both;
+    display: block;
+  }
 }
