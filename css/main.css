@@ -472,6 +472,9 @@
 #j_mainSlideSecond .j_SecondSlideImage {}
 
 #j_mainSlideSecond .j_SecondSlideImage li {
+   bottom:28%;
+   vertical-align: middle;
+   top: unset !important;
 }
 
 #j_mainSlideSecond .j_SecondSlideImage li img {
