@@ -24,6 +24,39 @@ $(document).ready(function() {
         'height': cakeHeightMobile
       });
     }
+    var cakebox = $('.k_showcakes > ul > li');
+    var headerW = $('#header_wrapper').width();
+    var cakecnt = $('.k_showcakes > ul > li').length;
+    for (var i = 0; i < cakecnt; i++) {
+      $('.k_showcakes > ul > li').eq(i).hover(function() {
+        $(this).children('dl').stop().fadeIn(400);
+        $(this).children('dl').children('dt').stop().animate({
+          'top': 45
+        }, 'slow');
+        $(this).children('dl').children('dd').stop().animate({
+          'bottom': 0
+        }, 'slow');
+        if(headerW < 360){
+          $(this).children('dl').children('dt').stop().animate({
+            'top': 30
+          });
+          $(this).children('dl').children('dd').stop().animate({
+            'bottom': 40
+          });
+        }
+      }, function() {
+        $(this).children('dl').css({
+          'display': 'none'
+        });
+        $(this).children('dl').children('dt').stop().animate({
+          'top': -50
+        });
+        $(this).children('dl').children('dd').stop().animate({
+          'bottom': -150
+        });
+      })
+
+    }
   })
   //케이크정렬
   var cakebox = $('.k_showcakes > ul > li');
@@ -82,7 +115,7 @@ $(document).ready(function() {
     $(this).addClass('menuhover')
   })
 
-
+  var headerW = $('#header_wrapper').width();
   var cakecnt = $('.k_showcakes > ul > li').length;
   for (var i = 0; i < cakecnt; i++) {
     $('.k_showcakes > ul > li').eq(i).hover(function() {
@@ -93,6 +126,14 @@ $(document).ready(function() {
       $(this).children('dl').children('dd').stop().animate({
         'bottom': 0
       }, 'slow');
+      if(headerW < 360){
+        $(this).children('dl').children('dt').stop().animate({
+          'top': 30
+        });
+        $(this).children('dl').children('dd').stop().animate({
+          'bottom': 40
+        });
+      }
     }, function() {
       $(this).children('dl').css({
         'display': 'none'
@@ -104,7 +145,7 @@ $(document).ready(function() {
         'bottom': -150
       });
     })
-    console.log(i);
+
   }
 
 
