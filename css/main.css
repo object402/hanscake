@@ -474,7 +474,7 @@
 #j_mainSlideSecond .j_SecondSlideImage li {
    bottom:28%;
    vertical-align: middle;
-   top: unset !important;
+   top: unset;
 }
 
 #j_mainSlideSecond .j_SecondSlideImage li img {
@@ -695,6 +695,7 @@
    margin-top: 10px;
 }
 #j_mainSlideSecond .j_SecondSlideImage li{
+   bottom: unset;
    top: 26%;
 }
 #j_mainSlideSecond .j_SecondSlideTxt .j_hideBr_title_smallest{
