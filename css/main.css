@@ -123,8 +123,8 @@
    z-index: 1;
    text-align: center;
    display: none;
-   opacity: 0;
-   top: 600px;
+   /* opacity: 0; */
+   top: 555px;
    right: 50%;
    transform: translateX(50%);
 }
@@ -486,7 +486,7 @@
 #j_mainSlideSecond .j_SecondSlideTxt {}
 
 #j_mainSlideSecond .j_SecondSlideTxt li {
-   top: 365px;
+   top: 328px;
    width: 100%;
 }
 #j_mainSlideSecond .j_SecondSlideTxt .j_hideBr{

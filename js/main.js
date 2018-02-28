@@ -103,17 +103,11 @@ $(document).ready(function() {
    var SecondImgLength = $('#j_mainSlideSecond .j_SecondSlideImage li').length;
    console.log('SecondImgLength:' + SecondImgLength);
    var SecondImgOrder = $('#j_mainSlideSecond .j_SecondSlideImage li');
+   var SecondTxtOrder = $('#j_mainSlideSecond .j_SecondSlideTxt li');
    var num2 = 0;
-   // var secondSlideTop = 540/334;
-   //var secondSlideTop_origin = 600/365;
 
    SecondImgOrder.eq(num2).fadeIn(700);
-   $('#j_mainSlideSecond .j_SecondSlideTxt li').stop().eq(0).animate({
-      top: secondSlideTop,
-      opacity: 1
-   }, 700).css({
-      'display': 'block'
-   });
+   SecondTxtOrder.eq(num2).fadeIn(700);
 
 
    //두번째 슬라이드
@@ -122,40 +116,22 @@ $(document).ready(function() {
       SecondImgOrder.css({
          'display': 'none'
       });
+      SecondTxtOrder.css({
+         'display':'none'
+      });
       SecondImgOrder.eq(num2).fadeIn(700);
+      SecondTxtOrder.eq(num2).fadeIn(700);
       if (num2 == SecondImgLength) {
          num2 = 0;
          //마지막이면 순서 0째로 처음으로 돌아가기
          SecondImgOrder.css({
             'display': 'none'
          });
-         SecondImgOrder.eq(num2).fadeIn(700);
-      }
-
-      //이미지 아래 텍스트 초기화 + 아래서 위로 올라오고, 오퍼시티 없애기
-      $('#j_mainSlideSecond .j_SecondSlideTxt li').css({
-         'opacity': '0',
-         'top': 'secondSlideTop_origin',
-         'display': 'none'
-      });
-      $('#j_mainSlideSecond .j_SecondSlideTxt li').stop().eq(num2).animate({
-         top: secondSlideTop,
-         opacity: 1
-      }, 700).css({
-         'display': 'block'
-      });
-      if (num2 == SecondImgLength) {
-         $('#j_mainSlideSecond .j_SecondSlideTxt li').css({
-            'opacity': '0',
-            'top': 'secondSlideTop_origin',
+         SecondTxtOrder.css({
             'display': 'none'
          });
-         $('.j_SecondSlideTxt li').stop().eq(0).animate({
-            top: secondSlideTop,
-            opacity: 1
-         }, 700).css({
-            'display': 'block'
-         });
+         SecondImgOrder.eq(num2).fadeIn(700);
+         SecondTxtOrder.eq(num2).fadeIn(700);
       }
 
       return false;
@@ -172,40 +148,25 @@ $(document).ready(function() {
       SecondImgOrder.css({
          'display': 'none'
       });
+      SecondTxtOrder.css({
+         'display': 'none'
+      });
       SecondImgOrder.eq(num2).fadeIn(700);
+      SecondTxtOrder.eq(num2).fadeIn(700);
+
       if (num2 == SecondImgLength) {
          num2 = 0;
          //마지막이면 순서 0째로 처음으로 돌아가기
          SecondImgOrder.css({
             'display': 'none'
          });
+         SecondTxtOrder.css({
+            'display':'none'
+         });
          SecondImgOrder.eq(num2).fadeIn(700);
+         SecondTxtOrder.eq(num2).fadeIn(700);
       }
 
-      if (num2 == SecondImgLength) {
-         $('#j_mainSlideSecond .j_SecondSlideTxt li').css({
-            'opacity': '0',
-            'top': 'secondSlideTop_origin',
-            'display': 'none'
-         });
-         $('.j_SecondSlideTxt li').stop().eq(0).animate({
-            top: secondSlideTop,
-            opacity: 1
-         }, 700).css({
-            'display': 'block'
-         });
-      }
-      $('#j_mainSlideSecond .j_SecondSlideTxt li').css({
-         'opacity': '0',
-         'top': 'secondSlideTop_origin',
-         'display': 'none'
-      });
-      $('#j_mainSlideSecond .j_SecondSlideTxt li').stop().eq(num2).animate({
-         top: secondSlideTop,
-         opacity: 1
-      }, 700).css({
-         'display': 'block'
-      });
       playSecond = setInterval(playSecondSlide, 3500);
    })
 
@@ -217,40 +178,25 @@ $(document).ready(function() {
       SecondImgOrder.css({
          'display': 'none'
       });
+      SecondTxtOrder.css({
+         'display': 'none'
+      });
       SecondImgOrder.eq(num2).fadeIn(700);
+      SecondTxtOrder.eq(num2).fadeIn(700);
+
       if (num2 == -(SecondImgLength + 1)) {
          num2 = -1;
          //마지막이면 순서 0째로 처음으로 돌아가기
          SecondImgOrder.css({
             'display': 'none'
          });
-         SecondImgOrder.eq(num2).fadeIn(700);
-      }
-
-      if (num2 == -(SecondImgLength + 1)) {
-         $('#j_mainSlideSecond .j_SecondSlideTxt li').css({
-            'opacity': '0',
-            'top': 'secondSlideTop_origin',
+         SecondTxtOrder.css({
             'display': 'none'
          });
-         $('.j_SecondSlideTxt li').stop().eq(num2).animate({
-            top: secondSlideTop,
-            opacity: 1
-         }, 700).css({
-            'display': 'block'
-         });
+         SecondImgOrder.eq(num2).fadeIn(700);
+         SecondTxtOrder.eq(num2).fadeIn(700);
       }
-      $('#j_mainSlideSecond .j_SecondSlideTxt li').css({
-         'opacity': '0',
-         'top': 'secondSlideTop_origin',
-         'display': 'none'
-      });
-      $('#j_mainSlideSecond .j_SecondSlideTxt li').stop().eq(num2).animate({
-         top: secondSlideTop,
-         opacity: 1
-      }, 700).css({
-         'display': 'block'
-      });
+
       playSecond = setInterval(playSecondSlide, 3500);
 
       console.log('prevNum2:' + num2);
